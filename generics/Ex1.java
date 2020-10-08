@@ -29,13 +29,10 @@ public class Ex1 {
 }
 
 class Box<T> {
-    private ArrayList<T> itemArr = new ArrayList<>();
-
-    public ArrayList<T> getItemArr() { return itemArr; }
-    public void addItem(T item) { itemArr.add(item); }
-
-    @Override
-    public String toString() {
-        return itemArr.toString();
-    }
+    ArrayList<T> list = new ArrayList<>();
+    public void addItem(T item) { list.add(item); }
+    public T getIdxOf(int i) { return list.get(i); }
+    public ArrayList<T> getList() { return list; }
+    int size() { return list.size(); }
+    public String toString() { return list.toString(); }
 }
