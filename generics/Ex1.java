@@ -2,10 +2,31 @@ package generics;
 
 import java.util.ArrayList;
 
-class Fruit                 { public String toString() { return "Fruit"; } }
-class Apple extends Fruit   { public String toString() { return "Apple"; } }
-class Grape extends Fruit   { public String toString() { return "Grape"; } }
-class Toy                   { public String toString() { return "Toy"; } }
+class Fruit                 { 
+    String name; int weight;
+    Fruit() { this(100); }
+    Fruit(int weight) {
+        this("Fruit", weight);
+    }
+    Fruit(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+    public String toString() { return this.name + " (" + this.weight + ")"; } 
+}
+class Apple extends Fruit   { 
+    Apple() { this(100); }
+    Apple(int weight) {
+        super("Apple", weight);
+    }
+}
+class Grape extends Fruit   { 
+    Grape() { this(100); }
+    Grape(int weight) {
+        super("Grape", weight);
+    } 
+}
+class Toy { public String toString() { return "Toy"; } }
 
 public class Ex1 {
     public static void main( String[] args ) {
