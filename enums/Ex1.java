@@ -1,6 +1,6 @@
 package enums;
 
-enum Direction { EAST, WEST, SOUTH, NORTH }
+// enum Direction { EAST, WEST, SOUTH, NORTH }
 
 public class Ex1 {
     public static void main(String[] args) {
